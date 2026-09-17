@@ -1,0 +1,9 @@
+# The deployable app in this monorepo is the Next.js frontend.
+# The FastAPI service under backend/ is deployed separately (see render.yaml).
+[build]
+  base = "frontend"
+  command = "npm run build"
+  publish = ".next"
+
+[build.environment]
+  NODE_VERSION = "22"
